@@ -1,7 +1,14 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
 
+const name = "Kadeem";
+const age = 24;
+const home = "New York City";
+   let sayName = ()  => {
+  console.log('Hi, my name is ' + name + '. ' + 'I am ' + age + ' years old. ' + 'I live in ' + home + '.');
+}
 
+    sayName();
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
 

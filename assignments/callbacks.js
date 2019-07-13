@@ -31,8 +31,8 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
 const getLength = (arr, cb) => {
   // getLength passes  tyhe length of the array into the callback.
-  for (let i = 0; i < arr.length; i++ )
-    cb(arr.length);
+  
+   return cb(arr.length);
 }
 
 getLength(items, (length) => {
@@ -41,7 +41,7 @@ getLength(items, (length) => {
 
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
-     cb(arr[3]);
+     cb(arr[arr.length - 1]);
 }
 
 last(items, (lastItem) => {
@@ -72,7 +72,19 @@ function multiplyNums(x, y, cb) {
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
+  for(i = 0; i < items.length; i++){
+    if(list[i] ===  item){
+     return cb(true);
+  }
+  return cb(false);
+
 }
+
+}
+
+contains('Notebook', items, (schoolSuplies) => {
+  console.log(schoolSuplies);
+});
 
 /* STRETCH PROBLEM */
 
